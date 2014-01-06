@@ -1,0 +1,14 @@
+Access.zh-cn
+Enterprise.WW
+Excel.zh-cn
+Groove.zh-cn
+InfoPath.zh-cn
+Office.zh-cn
+Office64.zh-cn
+OneNote.zh-cn
+Outlook.zh-cn
+PowerPoint.zh-cn
+Proofing.zh-cn
+Publisher.zh-cn
+Rosebud.zh-cn
+Word.zh-cn

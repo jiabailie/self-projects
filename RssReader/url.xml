@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <urls>
+    <url key="matrix67" value="http://feed.feedsky.com/matrix67" />
+    <url key="coolshell" value="http://coolshell.cn/feed" />
+    <url key="The Old New Thing" value="http://blogs.msdn.com/b/oldnewthing/rss.aspx" />
+  </urls>
+</config>
