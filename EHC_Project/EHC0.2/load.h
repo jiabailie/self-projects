@@ -11,8 +11,8 @@
 int loadsamplenamelist(const char* namefile, Sample_name** namelist, int * num);
 void initimagemrf(IMAGE_H_MRF **h_mrf, IMAGE_L_MRF **l_mrf, int num);
 int loadsamples(Sample_name* namelist, int num, IMAGE_H_MRF *h_mrf, IMAGE_L_MRF *l_mrf);
-int	loadhighimage(char *name, IMAGE_H_MRF *h_mrf);
-int	loadlowimage(char *name, IMAGE_L_MRF *l_mrf);
+int loadhighimage(char *name, IMAGE_H_MRF *h_mrf);
+int loadlowimage(char *name, IMAGE_L_MRF *l_mrf);
 
 /**
  * yangruiguo 2011-12-08

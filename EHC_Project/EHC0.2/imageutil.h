@@ -16,4 +16,4 @@ void _grayimage_rotate_90(unsigned char *idata, unsigned char *odata, int w, int
 int _rgb_variance(unsigned char _r,unsigned char _g,unsigned char _b);
 unsigned char *_imagedup(unsigned char *image,int  width,int height, int depth);
 unsigned char *_cut_image(unsigned char *data,int sw,int sh,
-						      int x,int y,int w, int h);
+            int x,int y,int w, int h);

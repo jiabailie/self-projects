@@ -11,23 +11,23 @@
 #define EHC_USE_GDIPLUS
 
 typedef struct _EHC_image{
-	int type; //1: char, 2: short, 3: long
-	int xdpi;
-	int ydpi;
-	int w, h;
-	int depth;
-	int stride;
-	unsigned char *data;
+ int type; //1: char, 2: short, 3: long
+ int xdpi;
+ int ydpi;
+ int w, h;
+ int depth;
+ int stride;
+ unsigned char *data;
 } EHC_image;
 
 enum _EHC_ERROR_CODES{
-	EHC_NO_ERROR = 0,
-	EHC_FILE_NOT_EXIST,
-	EHC_FILE_UNSUPPORT_FORMAT,
-	EHC_OPEN_IMAGE_FAIL,
-	EHC_READ_IMAGE_FAIL,
-	EHC_SAVE_IMAGE_FAIL,
-	EHC_ERROR_NUMS
+ EHC_NO_ERROR = 0,
+ EHC_FILE_NOT_EXIST,
+ EHC_FILE_UNSUPPORT_FORMAT,
+ EHC_OPEN_IMAGE_FAIL,
+ EHC_READ_IMAGE_FAIL,
+ EHC_SAVE_IMAGE_FAIL,
+ EHC_ERROR_NUMS
 };
 
 

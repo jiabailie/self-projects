@@ -5,24 +5,24 @@
 #define H_STEP 10
 #define L_STEP 5
 
-//#define H_DIS	5
-#define H_DIS	20
-#define L_DIS	3
+//#define H_DIS 5
+#define H_DIS 20
+#define L_DIS 3
 #define L_H_MATCH_OPTION  2
 
 #define SAMPLE_NUM 60
 
-#define MAX 512
-#define MAXLEN 128
-#define MAXSIZE 33554432
+#define MAX            512
+#define MAXLEN         128
+#define MAXSIZE        33554432
 #define FAIL_OPEN_FILE -1
 #define FAIL_FIND_FILE -2
-#define SUC_RETURN		0
+#define SUC_RETURN     0
 
-#define TEST_RESULT         "..\\..\\testresult\\"
+#define TEST_RESULT        "..\\..\\testresult\\"
 
 /* the folder which holds the images waitting to be restored */
-#define TEST_RESTORE        "..\\..\\restore\\"
+#define TEST_RESTORE       "..\\..\\restore\\"
 
 #define SAMPLE_DIR         "..\\..\\sampleimages\\"
 #define SAMPLE_DIR_NAME    "..\\..\\sampleimages\\dir.txt"
@@ -58,70 +58,70 @@ typedef int L_label;
 
 //high quality images' label
 typedef struct st_H_LABEL{
-	int lt;
-	int rt;
-	int lb;
-	int rb;
+ int lt;
+ int rt;
+ int lb;
+ int rb;
 }H_label;
 
 //low quality images' MRF count
 typedef struct st_L_count{
-	int l;
-	LL c;
+ int l;
+ LL c;
 }L_count;
 
 //high quality images' MRF count
 typedef struct st_H_count{
-	int lt; 
-	int rt;
-	int lb;
-	int rb;
-	LL c;
+ int lt; 
+ int rt;
+ int lb;
+ int rb;
+ LL c;
 }H_count;
 
 //the cluster of low quality images
 typedef struct st_L_cluster{
-	int subNum;
-	L_label l;
-	L_label* sub;
+ int subNum;
+ L_label l;
+ L_label* sub;
 }L_cluster;
 
 //the cluster of high quality images
 typedef struct st_H_cluster{
-	int subNum;
-	H_label l;
-	H_label* sub;
+ int subNum;
+ H_label l;
+ H_label* sub;
 }H_cluster;
 
 //give each cluster a integer value
 typedef struct st_H_statis{
-	LL v;
-	H_label l;
+ LL v;
+ H_label l;
 }H_statis;
 
 //give each low cluster a continuous integer value
 typedef struct st_L_statis{
-	LL v;
-	L_label l;
+ LL v;
+ L_label l;
 }L_statis;
 
 //the struct of each low quality image
 typedef struct st_IMAGE_L_MRF{
-	L_label * label;
-	int xnum;	
-	int ynum;	
+ L_label * label;
+ int xnum; 
+ int ynum; 
 }IMAGE_L_MRF;
 
 //the struct of each high quality image
 typedef struct st_IMAGE_H_MRF{
-	H_label * label;
-	int xnum;	
-	int ynum;	
+ H_label * label;
+ int xnum; 
+ int ynum; 
 }IMAGE_H_MRF;
 
 typedef struct st_sample_name{
-	char h_name[500];
-	char l_name[500];
+ char h_name[500];
+ char l_name[500];
 }Sample_name;
 
 #endif 

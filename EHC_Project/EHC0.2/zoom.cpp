@@ -30,8 +30,8 @@
 
 /************************************************************************/
 void _zoom(unsigned char **zmdata, int *zw, int *zh, 
-		  unsigned char *indata, int iw, int ih, int depth, 
-		  float xfctr, float yfctr)
+    unsigned char *indata, int iw, int ih, int depth, 
+    float xfctr, float yfctr)
 {
 
    unsigned char *chardata;
@@ -48,16 +48,16 @@ void _zoom(unsigned char **zmdata, int *zw, int *zh,
    } else{
       /* if shrinking y, then do it first to mimimize length of col copies */
       if(yfctr <= 1.0)
-	  {
+   {
          chardata = (unsigned char *)_imagedup(indata, iw, ih, depth);
          _zoom_y(&yzmdata, &xw, &xh, chardata, iw, ih, depth, yfctr);
          free(chardata);
          _zoom_x(zmdata, zw, zh, yzmdata, xw, xh, depth, xfctr);
          free(yzmdata);
-	  }
+   }
       /* if enlarging y, then do it last to mimimize length of col copies */
       if(yfctr > 1.0)
-	  {
+   {
          chardata = (unsigned char *)_imagedup(indata, iw, ih, depth);
          _zoom_x(&xzmdata, &xw, &xh, chardata, iw, ih, depth, xfctr);
          free(chardata);
@@ -69,7 +69,7 @@ void _zoom(unsigned char **zmdata, int *zw, int *zh,
 
 /************************************************************************/
 void _zoom_x(unsigned char **xzmdata, int *zw, int *zh, 
-			unsigned char *chardata, int iw, int ih, int depth, float xfctr)
+   unsigned char *chardata, int iw, int ih, int depth, float xfctr)
 {
    if(xfctr == 1.0)
    {
@@ -85,7 +85,7 @@ void _zoom_x(unsigned char **xzmdata, int *zw, int *zh,
 
 /************************************************************************/
 void _zoom_y(unsigned char **yzmdata, int *zw, int *zh, 
-			unsigned char *chardata, int iw, int ih, int depth, float yfctr)
+   unsigned char *chardata, int iw, int ih, int depth, float yfctr)
 {
    if(yfctr == 1.0)
    {
@@ -101,7 +101,7 @@ void _zoom_y(unsigned char **yzmdata, int *zw, int *zh,
 
 /************************************************************************/
 void _enlarge_x(unsigned char **xzmdata, int *zw, int *zh, 
-			   unsigned char *chardata, int iw, int ih, int depth, float xfctr)
+      unsigned char *chardata, int iw, int ih, int depth, float xfctr)
 {
    int from, to1, to2;
    float f_current;
@@ -126,7 +126,7 @@ void _enlarge_x(unsigned char **xzmdata, int *zw, int *zh,
 
 /************************************************************************/
 void _enlarge_y(unsigned char ** yzmdata, int *zw, int *zh, 
-			   unsigned char *chardata, int iw, int ih, int depth, float yfctr)
+      unsigned char *chardata, int iw, int ih, int depth, float yfctr)
 {
    int from, to1, to2;
    float f_current;
@@ -151,7 +151,7 @@ void _enlarge_y(unsigned char ** yzmdata, int *zw, int *zh,
 
 /************************************************************************/
 void _shrink_x(unsigned char **xzmdata, int *zw, int *zh, 
-			  unsigned char *chardata, int iw, int ih, int depth, float xfctr)
+     unsigned char *chardata, int iw, int ih, int depth, float xfctr)
 {
    int from, to;
    float recip, f_current;
@@ -175,7 +175,7 @@ void _shrink_x(unsigned char **xzmdata, int *zw, int *zh,
 
 /************************************************************************/
 void _shrink_y(unsigned char **yzmdata, int *zw, int *zh, 
-			  unsigned char *chardata, int iw, int ih, int depth, float yfctr)
+     unsigned char *chardata, int iw, int ih, int depth, float yfctr)
 {
    int from, to;
    float recip, f_current;
@@ -200,8 +200,8 @@ void _shrink_y(unsigned char **yzmdata, int *zw, int *zh,
 
 /************************************************************************/
 void _copy_cols(unsigned char *xzmdata, int zw, int zh, 
-			  int to1, int to2, 
-			  unsigned char *chardata, int iw, int ih, int depth, int from)
+     int to1, int to2, 
+     unsigned char *chardata, int iw, int ih, int depth, int from)
 {
    int i;
 
@@ -213,7 +213,7 @@ void _copy_cols(unsigned char *xzmdata, int zw, int zh,
 
 /************************************************************************/
 void _copy_col(unsigned char *xzmdata, int zw, int zh, int to, 
-			  unsigned char *chardata,int  iw, int ih, int depth, int from)
+     unsigned char *chardata,int  iw, int ih, int depth, int from)
 {
    unsigned char *fptr, *tptr;
    int i;
@@ -224,33 +224,33 @@ void _copy_col(unsigned char *xzmdata, int zw, int zh, int to,
 
    if(zh != ih)
    {
-	   //fatalerr("copy_col", "length of columns not equal", NULL);
-	   ;
+    //fatalerr("copy_col", "length of columns not equal", NULL);
+    ;
    }
-	movedbits = 1;
-	switch( depth )
-	{
-	case 8:	
-		movedbits = 1;
-		break;
-	case 16:
-		movedbits = 2;
-		break;
-	case 24:
-		movedbits = 3;
-		break;
-	case 32:
-		movedbits = 4;
-		break;
-	}
+ movedbits = 1;
+ switch( depth )
+ {
+ case 8: 
+  movedbits = 1;
+  break;
+ case 16:
+  movedbits = 2;
+  break;
+ case 24:
+  movedbits = 3;
+  break;
+ case 32:
+  movedbits = 4;
+  break;
+ }
    fptr = chardata + from * movedbits;
    tptr = xzmdata + to * movedbits;
    for(i = 0; i < zh; i++)
    {
-	   for(j = 0; j < movedbits; j ++ )
-	   {
-		   *(tptr + j) = *(fptr + j);
-	   }
+    for(j = 0; j < movedbits; j ++ )
+    {
+     *(tptr + j) = *(fptr + j);
+    }
       tptr += zw_size;
       fptr += iw_size;
    }
@@ -258,7 +258,7 @@ void _copy_col(unsigned char *xzmdata, int zw, int zh, int to,
 
 /************************************************************************/
 void _copy_rows(unsigned char *yzmdata, int zw, int zh, int to1, int to2, 
-			   unsigned char *chardata, int iw, int ih, int depth, int from)
+      unsigned char *chardata, int iw, int ih, int depth, int from)
 {
    int i;
 
@@ -270,7 +270,7 @@ void _copy_rows(unsigned char *yzmdata, int zw, int zh, int to1, int to2,
 
 /************************************************************************/
 void _copy_row(unsigned char *yzmdata, int zw, int zh, int to, 
-			  unsigned char *chardata, int iw, int ih, int depth, int from)
+     unsigned char *chardata, int iw, int ih, int depth, int from)
 {
    unsigned char *fptr, *tptr;
    
@@ -279,11 +279,11 @@ void _copy_row(unsigned char *yzmdata, int zw, int zh, int to,
    int _ih;
    _zh = zh;
    _ih = ih;
-	//
+ //
    if(zw != iw)
    {
-	 //  fatalerr("copy_row", "length of rows not equal", NULL);
-	   ;
+  //  fatalerr("copy_row", "length of rows not equal", NULL);
+    ;
    }
    int iw_size = _width_bytes( depth, iw);
    int zw_size = _width_bytes( depth, zw);

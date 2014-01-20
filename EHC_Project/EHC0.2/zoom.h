@@ -25,48 +25,48 @@
 #pragma once
 /************************************************************************/
 void _zoom(unsigned char **zmdata, int *zw, int *zh, 
-		  unsigned char *bindata, int iw, int ih, int depth,
-		  float xfctr, float yfctr);
+    unsigned char *bindata, int iw, int ih, int depth,
+    float xfctr, float yfctr);
 
 /************************************************************************/
 void _zoom_x(unsigned char **xzmdata, int *zw, int *zh, 
-			unsigned char *chardata, int iw, int ih, int depth,float xfctr);
+   unsigned char *chardata, int iw, int ih, int depth,float xfctr);
 
 /************************************************************************/
 void _zoom_y(unsigned char **yzmdata, int *zw, int *zh, 
-			unsigned char *chardata, int iw, int ih, int depth,float yfctr);
+   unsigned char *chardata, int iw, int ih, int depth,float yfctr);
 
 /************************************************************************/
 void _enlarge_x(unsigned char **xzmdata, int *zw, int *zh, 
-			   unsigned char *chardata, int iw, int ih, int depth,float xfctr);
+      unsigned char *chardata, int iw, int ih, int depth,float xfctr);
 
 
 /************************************************************************/
 void _enlarge_y(unsigned char **, int *zw, int *zh, 
-			   unsigned char *chardata, int iw, int ih, int depth,float yfctr);
+      unsigned char *chardata, int iw, int ih, int depth,float yfctr);
 
 
 /************************************************************************/
 void _shrink_x(unsigned char **xzmdata, int *zw, int *zh, 
-			  unsigned char *chardata, int iw, int ih, int depth,float xfctr);
+     unsigned char *chardata, int iw, int ih, int depth,float xfctr);
 
 /************************************************************************/
 void _shrink_y(unsigned char **yzmdata, int *zw, int *zh, 
-			  unsigned char *chardata, int iw, int ih, int depth,float yfctr);
+     unsigned char *chardata, int iw, int ih, int depth,float yfctr);
 
 /************************************************************************/
 void _copy_cols(unsigned char *xzmdata, int zw, int zh, 
-			  int to1, int to2, 
-			  unsigned char *chardata, int iw, int ih, int depth, int from);
+     int to1, int to2, 
+     unsigned char *chardata, int iw, int ih, int depth, int from);
 
 /************************************************************************/
 void _copy_col(unsigned char *xzmdata, int zw, int zh, int to, 
-			  unsigned char *chardata,int  iw, int ih, int depth, int from);
+     unsigned char *chardata,int  iw, int ih, int depth, int from);
 
 /************************************************************************/
 void _copy_rows(unsigned char *yzmdata, int zw, int zh, int to1, int to2, 
-			   unsigned char *chardata, int iw, int ih, int depth, int from);
+      unsigned char *chardata, int iw, int ih, int depth, int from);
 
 /************************************************************************/
 void _copy_row(unsigned char *yzmdata, int zw, int zh, int to, 
-			  unsigned char *chardata, int iw, int ih, int depth, int from);
+     unsigned char *chardata, int iw, int ih, int depth, int from);

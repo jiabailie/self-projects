@@ -6,21 +6,21 @@
 
 void syserr(char *msg1,char *msg2,char *msg3)
 {
-	char * _msg1;
-	char * _msg2;
-	char * _msg3;
-	_msg1 = msg1;
-	_msg2 = msg2;
-	_msg3 = msg3;
-	return;
+ char * _msg1;
+ char * _msg2;
+ char * _msg3;
+ _msg1 = msg1;
+ _msg2 = msg2;
+ _msg3 = msg3;
+ return;
 }
 /*******************************************************************/
 //
 void *_datadup(void *p, int nbytes, char *s)
 {
-	void *q;
-	char *_s;
-	_s = s;
+ void *q;
+ char *_s;
+ _s = s;
 
    if ( p == NULL )
    {
@@ -37,7 +37,7 @@ void *_datadup(void *p, int nbytes, char *s)
 /*******************************************************************/
 void _malloc_char(char **ptr, int n, char *s)
 {
-	if(((*ptr) = (char *)malloc(n * sizeof(char))) == NULL)
+ if(((*ptr) = (char *)malloc(n * sizeof(char))) == NULL)
       syserr("malloc_char","malloc",s);
     memset(*ptr, 0, n*sizeof(char));
 }

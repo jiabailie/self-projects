@@ -9,7 +9,7 @@
  * l_num     : the number of low quality images' cluster
  * hmrf      : the replaced high quality images' MRF
  * h_mrf     : the high quality images' MRF
- * l_mrf	 : the low quality images' MRF
+ * l_mrf  : the low quality images' MRF
  * h_cluster : the high quality images' clusters
  * l_cluster : the low quality images' clusters
  * x2y       : the calculated result , a 2 dimensions array, y-->x

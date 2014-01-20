@@ -28,17 +28,17 @@ int train()
 
 	char* namefile = SAMPLE_DIR_NAME; /* the file's name which saves the name list of sample images' */
 
-	IMAGE_L_MRF* l_mrf = NULL; /* the struct array which saves the patitioned low quality images  */
-	IMAGE_H_MRF* h_mrf = NULL; /* the struct array which saves the patitioned high quality images  */
+	IMAGE_L_MRF* l_mrf = NULL; /* the partitioned low quality images  */
+	IMAGE_H_MRF* h_mrf = NULL; /* the partitioned high quality images  */
 
-	int** pl_mrf = NULL; /* the array which saves the projected low quality images */
-	int** ph_mrf = NULL; /* the array which saves the projected high quality images */
+	int** pl_mrf = NULL; /* the projected low quality images */
+	int** ph_mrf = NULL; /* the projected high quality images */
 
-	L_cluster* l_cluster = NULL; /* the struct array which saves the cluster of low quality images' */
-	H_cluster* h_cluster = NULL; /* the struct array which saves the cluster of high quality images' */
+	L_cluster* l_cluster = NULL; /* the cluster of low quality images' */
+	H_cluster* h_cluster = NULL; /* the cluster of high quality images' */
 
-	L_statis* l_statis = NULL; /* the struct array which saves the projected cluster of low quality images' */
-	H_statis* h_statis = NULL; /* the struct array which saves the projected cluster of high quality images' */
+	L_statis* l_statis = NULL; /* the projected cluster of low quality images' */
+	H_statis* h_statis = NULL; /* the projected cluster of high quality images' */
 
 	Sample_name* namelist = NULL; /* the name list read from the SAMPLE_DIR_NAME */
 
