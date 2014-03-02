@@ -8,13 +8,13 @@ Chapter 2: _Getting Started With Shell Programming_
 
 Chapter 3: _The Shell Variables and Environment_
 
-Chapter 4: _Conditionals Execution (Decision Making)
+Chapter 4: _Conditionals Execution (Decision Making)_
 
 Chapter 5: _Bash Loops_
 
 Chapter 6: _Shell Redirection_
 
-Chapter 7: _Pipes and Filters
+Chapter 7: _Pipes and Filters_
 
 Chapter 8: _Traps_
 
