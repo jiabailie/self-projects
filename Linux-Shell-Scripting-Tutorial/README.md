@@ -1,6 +1,6 @@
 ### Linux Shell Scripting Tutorial
 
-**Translate [Linux Shell Scripting Tutorial](http://bash.cyberciti.biz/guide)**
+**Translate [Linux Shell Scripting Tutorial](http://bash.cyberciti.biz/guide) into Chinese.**
 
 Chapter 1: _Quick Introduction to Linux_
 
