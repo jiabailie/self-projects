@@ -3,3 +3,5 @@
 * 学习Shell脚本的相关知识
 
 * 介绍有关Linux内核、shell、bash和脚本的基础知识。
+
+01. Linux是什么？
