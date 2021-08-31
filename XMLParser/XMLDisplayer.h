@@ -38,24 +38,24 @@ void XMLDisplayer::displayXMLNode(int shift, XMLNode& node) {
     cout << xmlNode << endl;
 
     cout << getShift(shift) << "XML Attributes:" << endl;
-    for(XMLAttribute attr: node.attributes) {
+    for(int i = 0; i < node.attributes.size(); ++i) {
         string xmlAttr;
         xmlAttr.append(getShift(shift + 1));
         xmlAttr.append("name=");
-        xmlAttr.append(attr.name);
+        xmlAttr.append(node.attributes[i].name);
         xmlAttr.append(";value=");
-        xmlAttr.append(attr.value);
+        xmlAttr.append(node.attributes[i].value);
         cout << xmlAttr << endl;
     }
 
-    for(XMLNode subNode: node.nodes) {
-        displayXMLNode(shift + 4, subNode);
+    for(int i = 0; i < node.nodes.size(); ++i) {
+        displayXMLNode(shift + 4, node.nodes[i]);
     }
 }
 
 void XMLDisplayer::displayXMLDocument(XMLDocument& document) {
-    for(XMLNode node: document.nodes) {
-        displayXMLNode(0, node);
+    for(int i = 0; i < document.nodes.size(); ++i) {
+        displayXMLNode(0, document.nodes[i]);
     }
 }
 
