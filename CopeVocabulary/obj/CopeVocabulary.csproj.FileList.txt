@@ -1,8 +1,0 @@
-obj\Debug\ResolveAssemblyReference.cache
-obj\Debug\CopeVocabulary.Form1.resources
-obj\Debug\CopeVocabulary.Properties.Resources.resources
-obj\Debug\CopeVocabulary.csproj.GenerateResource.Cache
-bin\Debug\CopeVocabulary.exe
-bin\Debug\CopeVocabulary.pdb
-obj\Debug\CopeVocabulary.exe
-obj\Debug\CopeVocabulary.pdb
