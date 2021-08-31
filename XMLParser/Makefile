@@ -6,7 +6,7 @@ OBJECTS=$(SOURCES:.cpp=.o)
 EXECUTABLE=exec
 
 all: $(EXECUTABLE)
-	echo Make has finished.
+	@echo Make has finished.
 
 $(EXECUTABLE): $(OBJECTS)
 	$(CC)  $(OBJECTS) -o $@
